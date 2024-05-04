@@ -32,7 +32,7 @@ export async function loader() {
     node: {
       balance: await load('/node/balance'),
       collateral: await load('/node/check-collateral'),
-      rewards: await load('/node/rewards'),
+      // rewards: await load('/node/rewards'),
       rewardsInfo: await load('/node/get-rewards-info'),
       snapshotProposals: await load('/node/get-snapshot-proposals'),
       status: await load('/node/status')
