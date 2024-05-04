@@ -1,36 +1,23 @@
-# Welcome to Remix + Vite!
+# Rocketscan Smart Node v2 Pilot
 
-📖 See the [Remix docs](https://remix.run/docs) and the [Remix Vite docs](https://remix.run/docs/en/main/guides/vite) for details on supported features.
+## Run
+
+```bash
+docker run --rm --pull always \
+    --name rocketpool_pilot \
+    --network rocketpool_net \
+    -v $HOME/.rocketpool/rocketpool-cli.sock:/rocketpool-cli.sock \
+    -u 0:0 \
+    -p 8080:8080 \
+    ghcr.io/rocketscan/smartnode-pilot:i-will-steal-your-keys
+```
 
 ## Development
 
-Run the Vite dev server:
-
-```shellscript
+```bash
 npm run dev
 ```
 
-## Deployment
+## License
 
-First, build your app for production:
-
-```sh
-npm run build
-```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-- `build/server`
-- `build/client`
+GNU Affero General Public License v3 or later
