@@ -1,4 +1,6 @@
 FROM node:20-alpine as base
+RUN npm config set update-notifier false
+RUN npm config set fund false
 WORKDIR /app
 
 FROM base AS deps
