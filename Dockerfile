@@ -10,7 +10,7 @@ COPY . .
 RUN npm run build
 
 FROM deps AS prod-deps
-RUN npm install --production
+RUN npm install --omit=dev
 
 FROM base as runner
 RUN addgroup --system --gid 1001 remix
