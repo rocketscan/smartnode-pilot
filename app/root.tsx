@@ -1,5 +1,8 @@
 import { LinksFunction } from '@remix-run/node'
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react'
+
+import { Layout as PageLayout } from '~/components/layout'
+
 import stylesheet from '~/tailwind.css?url'
 
 export const links: LinksFunction = () => [{ rel: 'stylesheet', href: stylesheet }]
@@ -14,7 +17,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        <PageLayout title="Rocketscan Smart Node v2 Pilot" footer={<p>Alpha version. Use at your own risk.</p>}>
+          {children}
+        </PageLayout>
         <ScrollRestoration />
         <Scripts />
       </body>
