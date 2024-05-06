@@ -170,10 +170,10 @@ function ProtocolDAOProposalState({ children: state }: { children?: number }) {
   if (state === 2) return <>Active (phase 2)</>
   if (state === 3) return <>Destroyed</>
   if (state === 4) return <>Vetoed</>
-  if (state === 5) return <>Quarum not met</>
+  if (state === 5) return <>Quorum not met</>
   if (state === 6) return <>Defeated</>
   if (state === 7) return <>Suceeded</>
   if (state === 8) return <>Expired</>
-  if (state === 9) return <>Excuted</>
+  if (state === 9) return <>Executed</>
   return <>Unknown</>
 }
