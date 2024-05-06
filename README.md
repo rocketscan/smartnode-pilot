@@ -3,7 +3,7 @@
 ## Run
 
 ```bash
-docker run --rm --pull always \
+docker run --rm -it --init --pull always \
     --name rocketpool_pilot \
     --network rocketpool_net \
     -v $HOME/.rocketpool/rocketpool-cli.sock:/rocketpool-cli.sock \
